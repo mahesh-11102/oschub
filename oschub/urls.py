@@ -13,6 +13,3 @@ urlpatterns = [
         path('livestream/', include('livestreams.urls')),
         path('admin/updateSheet', UpdateSheet.as_view(), name='updateSheets'),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
