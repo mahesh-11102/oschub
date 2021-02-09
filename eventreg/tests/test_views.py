@@ -22,12 +22,11 @@ class TestViews(TestCase):
             eventStartTime=datetime.datetime(2020, 4, 9, 15, 30, 00),
             eventEndTime=datetime.datetime(2020, 4, 9, 17, 30, 00),
             eventRegEndDate=datetime.date(2020, 4, 8),
-            # TODO: Need to change the eventRegEndTime to TimeField from DateField
             eventRegEndTime=datetime.datetime(2020, 4, 9, 16, 30, 00),
             eventSpeaker="John Smith",
             eventURL='https://www.youtube.com/embed/hA_VxnxCHbo',
             eventDocumentation="https://docs.google.com/document/d/1n2sP5fz4ylSOaPrcbuXNVDmcZwBq0P1SIfBCoQm1cfI/edit?usp=sharing",
-            eventLogo=File(open("../../assets/Logo-Transparent.png", "rb"))
+            eventLogo="https://drive.google.com/file/d/1hl6Xt2cnUMC5RUrmXH6w-kQD8fhuF3rC/view?usp=sharing"
         )
 
     def test_eventList_GET(self):
@@ -41,3 +40,4 @@ class TestViews(TestCase):
 
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'eventreg/event_detail.html')
+
