@@ -9,7 +9,8 @@ class TestEventModels(TestCase):
     def setUp(self):
         self.event1 = Event.objects.create(
             eventName="TestEvent2",
-            eventDescription="Another test event",
+            eventCaption="One more test event, let's go.",
+            eventDescription="This is just another test event.",
             eventVenue="Online",
             eventDate=datetime.date(2020, 4, 9),
             eventStartTime=datetime.datetime(2020, 4, 9, 15, 30, 00),
